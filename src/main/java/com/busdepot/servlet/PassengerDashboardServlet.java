@@ -22,7 +22,7 @@ public class PassengerDashboardServlet extends HttpServlet {
             return;
         }
 
-        // Load all routes for the dropdown (mandatory selection)
+        // Load all routes
         req.setAttribute("routes", routeDAO.getAllRoutes());
         req.getRequestDispatcher("passenger-dashboard.jsp").forward(req, resp);
     }

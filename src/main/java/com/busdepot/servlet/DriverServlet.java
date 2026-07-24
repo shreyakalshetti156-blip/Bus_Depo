@@ -48,7 +48,7 @@ public class DriverServlet extends HttpServlet {
             return;
         }
 
-        // ✅ NEW: Handle Add
+     //Handle Add
         if ("add".equals(action)) {
             req.setAttribute("driver", null);           // empty driver object
             req.setAttribute("depots", depotDAO.getAllDepots());
@@ -56,7 +56,7 @@ public class DriverServlet extends HttpServlet {
             return;
         }
 
-        // Default: List all drivers
+        // List all drivers
         List<Driver> drivers = driverDAO.getAllDrivers();
         List<Depot> depots = depotDAO.getAllDepots();
         req.setAttribute("drivers", drivers);

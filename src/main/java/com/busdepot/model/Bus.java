@@ -17,6 +17,7 @@ public class Bus {
         this.depotId = depotId;
     }
 
+<<<<<<< HEAD
     public Integer getBusId() { 
     	return busId; 
     	}
@@ -29,6 +30,12 @@ public class Bus {
     public void setBusNumber(String busNumber) { 
     	this.busNumber = busNumber; 
     	}
+=======
+    public Integer getBusId() { return busId; }
+    public void setBusId(Integer busId) { this.busId = busId; }
+    public String getBusNumber() { return busNumber; }
+    public void setBusNumber(String busNumber) { this.busNumber = busNumber; }
+>>>>>>> 543e668ada4b0481b99425993b713150c4bc0146
     public String getBusType() { return busType; }
     public void setBusType(String busType) { this.busType = busType; }
     public Integer getCapacity() { return capacity; }
