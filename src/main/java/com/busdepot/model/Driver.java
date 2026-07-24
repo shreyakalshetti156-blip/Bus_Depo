@@ -1,46 +1,32 @@
-package com.Bus.dto;
+package com.busdepot.model;
 
 public class Driver {
-private Integer driver_id;
-private String driver_name;
-private String licence_number;
-private String phone;
-private Integer depot_id;
-public Integer getDriver_id() {
-	return driver_id;
-}
-public void setDriver_id(Integer driver_id) {
-	this.driver_id = driver_id;
-}
-public String getDriver_name() {
-	return driver_name;
-}
-public void setDriver_name(String driver_name) {
-	this.driver_name = driver_name;
-}
-public String getLicence_number() {
-	return licence_number;
-}
-public void setLicence_number(String licence_number) {
-	this.licence_number = licence_number;
-}
-public String getPhone() {
-	return phone;
-}
-public void setPhone(String phone) {
-	this.phone = phone;
-}
-public Integer getDepot_id() {
-	return depot_id;
-}
-public void setDepot_id(Integer depot_id) {
-	this.depot_id = depot_id;
-}
+    private Integer driverId;
+    private String driverName;
+    private String licenseNumber;
+    private String phone;
+    private Integer depotId;
+    private String depotName;
 
-@Override
-public String toString() {
-	return "Driver [driver_id=" + driver_id + ", driver_name=" + driver_name + ", licence_number=" + licence_number
-			+ ", phone=" + phone + ", depot_id=" + depot_id + "]";
-}
+    public Driver() {}
 
+    public Driver(String driverName, String licenseNumber, String phone, Integer depotId) {
+        this.driverName = driverName;
+        this.licenseNumber = licenseNumber;
+        this.phone = phone;
+        this.depotId = depotId;
+    }
+
+    public Integer getDriverId() { return driverId; }
+    public void setDriverId(Integer driverId) { this.driverId = driverId; }
+    public String getDriverName() { return driverName; }
+    public void setDriverName(String driverName) { this.driverName = driverName; }
+    public String getLicenseNumber() { return licenseNumber; }
+    public void setLicenseNumber(String licenseNumber) { this.licenseNumber = licenseNumber; }
+    public String getPhone() { return phone; }
+    public void setPhone(String phone) { this.phone = phone; }
+    public Integer getDepotId() { return depotId; }
+    public void setDepotId(Integer depotId) { this.depotId = depotId; }
+    public String getDepotName() { return depotName; }
+    public void setDepotName(String depotName) { this.depotName = depotName; }
 }

@@ -1,14 +1,15 @@
-package com.Bus.dao;
+package com.busdepot.dao;
 
 import java.util.List;
-
-import com.Bus.dto.Assignment;
+import com.busdepot.model.Assignment;
 
 public interface AssignmentDAO {
-	public boolean insertAssignment(Assignment assignment);
-	public boolean updateAssignment(Assignment assignment);
-	public boolean deleteAssignment(Assignment assignment);
-	Assignment getAssignmentById(int assignmentId);
-	
-	List<Assignment>getAllAssignment();
+    List<Assignment> getAllAssignments();
+    List<Assignment> getAssignmentsByDriver(Integer driverId);
+    List<Assignment> getAssignmentsByBus(Integer busId);
+    List<Assignment> getAssignmentsByDate(java.sql.Date date);
+    Assignment getAssignmentById(Integer id);
+    boolean addAssignment(Assignment assignment);
+    boolean updateAssignment(Assignment assignment);
+    boolean deleteAssignment(Integer id);
 }

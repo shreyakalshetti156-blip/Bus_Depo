@@ -1,40 +1,25 @@
-package com.Bus.dto;
+package com.busdepot.model;
 
 public class Route {
-private Integer route_id;
-private String route_name;
-private String start_point;
-private String end_point;
-public Integer getRoute_id() {
-	return route_id;
-}
-public void setRoute_id(Integer route_id) {
-	this.route_id = route_id;
-}
-public String getRoute_name() {
-	return route_name;
-}
-public void setRoute_name(String route_name) {
-	this.route_name = route_name;
-}
-public String getStart_point() {
-	return start_point;
-}
-public void setStart_point(String start_point) {
-	this.start_point = start_point;
-}
-public String getEnd_point() {
-	return end_point;
-}
-public void setEnd_point(String end_point) {
-	this.end_point = end_point;
-}
+    private Integer routeId;
+    private String routeName;
+    private String startPoint;
+    private String endPoint;
 
-@Override
-public String toString() {
-	return "Route [route_id=" + route_id + ", route_name=" + route_name + ", start_point=" + start_point
-			+ ", end_point=" + end_point + "]";
-}
+    public Route() {}
 
+    public Route(String routeName, String startPoint, String endPoint) {
+        this.routeName = routeName;
+        this.startPoint = startPoint;
+        this.endPoint = endPoint;
+    }
 
+    public Integer getRouteId() { return routeId; }
+    public void setRouteId(Integer routeId) { this.routeId = routeId; }
+    public String getRouteName() { return routeName; }
+    public void setRouteName(String routeName) { this.routeName = routeName; }
+    public String getStartPoint() { return startPoint; }
+    public void setStartPoint(String startPoint) { this.startPoint = startPoint; }
+    public String getEndPoint() { return endPoint; }
+    public void setEndPoint(String endPoint) { this.endPoint = endPoint; }
 }

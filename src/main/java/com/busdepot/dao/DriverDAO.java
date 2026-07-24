@@ -1,15 +1,13 @@
-package com.Bus.dao;
+package com.busdepot.dao;
 
 import java.util.List;
-
-import com.Bus.dto.Driver;
+import com.busdepot.model.Driver;
 
 public interface DriverDAO {
-	
-	    public boolean insertDriver(Driver driver);
-	    public boolean updateDriver(Driver driver);
-	    public boolean deleteDriver(int driverId);
-	    Driver getDriverById(int driverId);
-	    List<Driver> getAllDrivers();
-
-	}
+    List<Driver> getAllDrivers();
+    List<Driver> getDriversByDepot(Integer depotId);
+    Driver getDriverById(Integer id);
+    boolean addDriver(Driver driver);
+    boolean updateDriver(Driver driver);
+    boolean deleteDriver(Integer id);
+}
